@@ -100,7 +100,7 @@ public final class FollowMeParser {
             case UNSIGNAL   -> callUnSignalMethod(handler, elements);
             case FOLLOW     -> callFollowMethod(handler, elements);
             case STOP       -> callStopMethod(handler, elements);
-            case SKIP       -> callSkipMethod(handler, elements);
+            case CONTINUE -> callContinueMethod(handler, elements);
             case REPEAT     -> callRepeatMethod(handler, elements);
             case UNTIL      -> callUntilMethod(handler, elements);
             case FOREVER    -> callForeverMethod(handler, elements);
@@ -144,10 +144,10 @@ public final class FollowMeParser {
         }
     }
 
-    private void callSkipMethod(FollowMeParserHandler handler, String[] elements) throws FollowMeParserException {
+    private void callContinueMethod(FollowMeParserHandler handler, String[] elements) throws FollowMeParserException {
         if (elements.length == 2) {
             try {
-                handler.waitCommand(Integer.parseInt(elements[1]));
+                handler.continueCommand(Integer.parseInt(elements[1]));
             } catch (NumberFormatException e) {
                 throwSyntaxErrorException();
             }

@@ -71,7 +71,7 @@ public interface FollowMeParserHandler {
      *
      * @param s number of seconds;
      */
-    void waitCommand(int s);
+    void continueCommand(int s);
 
     /**
      * Method invoked when a command "REPEAT" is parsed.

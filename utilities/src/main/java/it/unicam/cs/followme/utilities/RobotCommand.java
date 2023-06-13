@@ -13,7 +13,7 @@ public enum RobotCommand {
     UNSIGNAL("UNSIGNAL"),
     FOLLOW("FOLLOW"),
     STOP("STOP"),
-    SKIP("SKIP"),
+    CONTINUE("CONTINUE"),
     REPEAT("REPEAT"),
     UNTIL("UNTIL"),
     FOREVER("DO FOREVER"),
